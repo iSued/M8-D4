@@ -16,7 +16,7 @@ usersRouter.get("/", authorize, async (req, res, next) => {
   }
 });
 
-usersRouter.get("/me", async (req, res, next) => {
+usersRouter.get("/me", authenticate, async (req, res, next) => {
   try {
     res.send(req.user);
   } catch (error) {
