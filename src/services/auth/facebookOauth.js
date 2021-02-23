@@ -9,7 +9,8 @@ passport.use(
     {
       clientID: process.env.FACEBOOK_CLIENT_ID,
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-      callbackURL: "http://localhost:5000/users/facebookRedirect",
+      callbackURL:
+        "https://mediumbackendclone.azurewebsites.net/users/facebookRedirect",
     },
     async function (accessToken, refreshToken, profile, next) {
       console.log(profile);

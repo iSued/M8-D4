@@ -9,7 +9,8 @@ passport.use(
     {
       clientID: process.env.SPOTIFY_CLIENT_ID,
       clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
-      callbackURL: "http://localhost:5000/users/spotifyRedirect",
+      callbackURL:
+        "https://mediumbackendclone.azurewebsites.net/users/spotifyRedirect",
     },
     async function (accessToken, refreshToken, expires_in, profile, next) {
       console.log(profile);

@@ -9,7 +9,8 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:5000/users/googleRedirect",
+      callbackURL:
+        "https://mediumbackendclone.azurewebsites.net/users/googleRedirect",
     },
     async (request, accessToken, refreshToken, profile, next) => {
       const newUser = {
